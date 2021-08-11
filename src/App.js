@@ -8,7 +8,7 @@ function App() {
   const [address, setAddress] = useState('');
 
   const [messageValue] = useState('Confirm ownership')
-  const [signatureInput, setSignatureInput] = useState('Confirm ownership')
+  const [signatureInput, setSignatureInput] = useState('')
   const [signResult, setSignResult] = useState('')
   const [addressOwner, setAddressOwner] = useState('')
 
