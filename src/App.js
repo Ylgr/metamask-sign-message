@@ -1,13 +1,14 @@
 import {useState} from 'react';
 import Web3 from 'web3';
 import {Container, Button, Card, CardHeader, CardBody, CardFooter, Label, Input, Row, Col} from 'reactstrap';
+import moment from 'moment-timezone';
 
 function App() {
 
   const [web3, setWeb3] = useState(null);
   const [address, setAddress] = useState('');
 
-  const [messageValue] = useState('Confirm ownership')
+  const messageValue = (moment().tz('Asia/Ho_Chi_Minh').startOf('day').valueOf() / 1000).toString()
   const [signatureInput, setSignatureInput] = useState('')
   const [signResult, setSignResult] = useState('')
   const [addressOwner, setAddressOwner] = useState('')
